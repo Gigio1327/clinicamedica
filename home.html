@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+            background-image: url(./imagens/img.home.png);
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-size: 100% 170%;
+
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            color:black;
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style-type: none;
+        }
+        #relogio {
+            text-align:center;
+            font-size: 96px;
+            color: red;
+        }
+    </style>
+    <body>
+        <h1>Home</h1>
+        
+       <ul>
+        <a href="agendar consulta.html"><li><h2>Agendar consulta</h2></li></a>
+            <a href="sobre.html"><li><h2>Sobre</h2></li></a>
+            </ul>
+            </body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Relógio</title>
+  <script>
+    function atualizarRelogio() {
+      var dataAtual = new Date();
+      var horas = dataAtual.getHours();
+      var minutos = dataAtual.getMinutes();
+      var segundos = dataAtual.getSeconds();
+      
+      // Formatação para exibir sempre dois dígitos
+      if (horas < 10) horas = "0" + horas;
+      if (minutos < 10) minutos = "0" + minutos;
+      if (segundos < 10) segundos = "0" + segundos;
+      
+      // Exibe o horário atual no elemento com o ID 'relogio'
+      document.getElementById('relogio').innerHTML = horas + ":" + minutos + ":" + segundos;
+    }
+    
+    // Atualiza o relógio a cada segundo
+    setInterval(atualizarRelogio, 1000);
+  </script>
+</head>
+<body>
+  <h1>Relógio</h1>
+  <div id="relogio"></div>
+</body>
+</html>
